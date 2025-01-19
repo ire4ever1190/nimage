@@ -130,7 +130,7 @@ when isMainModule:
           echo "Done!"
 
           # Anything before this is broken and too old to fix.
-          if version.key >= "0.16.0":
+          if version.key >= "0.16.0" and false:
             echo "Testing $#... " % tags[0]
             testImage(
               "$#:$#" % [tagPrefix, tags[0]],

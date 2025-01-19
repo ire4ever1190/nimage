@@ -28,7 +28,7 @@ jobs:
         echo "::set-output name=date::$(date +'%Y-%m-%d')"
         echo "::set-output name=git-describe::$(git describe --always)"
 
-    # Build docker images
+    # Build choosenim image
     - uses: docker/build-push-action@v6
       with:
         platforms: linux/amd64
@@ -36,4 +36,9 @@ jobs:
         push: true
         tags: |
           ekajake/choosenim-test:latest
-    
+    # Build Nim images
+    - uses: jiro4989/setup-nim-action@v2
+      with:
+        nim-version: '2.0.0' # default is 'stable'
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+    - run: nim r build.nim

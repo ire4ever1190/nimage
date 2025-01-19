@@ -33,6 +33,7 @@ jobs:
       with:
         platforms: linux/amd64
         file: choosenim/Dockerfile
+        push: true
         tags: |
-          choosenim:latest
+          ekajake/choosenim-test:latest
     

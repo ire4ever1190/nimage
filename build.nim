@@ -102,7 +102,7 @@ when isMainModule:
                  nigredo-tori <https://github.com/nigredo-tori>, \
                  markprocess <https://github.com/markprocess>"""
     labels = {"authors": authors}
-    tagPrefix = "nimlang/nim"
+    tagPrefix = "ekajake/nim-test"
     flavors = ["slim", "regular", "onbuild"]
 
   let

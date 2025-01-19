@@ -42,3 +42,7 @@ jobs:
         nim-version: '2.0.0' # default is 'stable'
         repo-token: ${{ secrets.GITHUB_TOKEN }}
     - run: nim r build.nim
+    - uses: docker/build-push-action@v6
+      with:
+        tags: |
+          ekajake/nim-test:2.2.0

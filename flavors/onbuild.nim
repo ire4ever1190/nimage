@@ -2,7 +2,7 @@
 #proc any*(version, base: string,
 #          labels: openarray[(string, string)] = {:}): string =
 #  result = ""
-FROM nimlang/nim:$version-$base-regular
+FROM ekajake/nim-test:$version-$base-regular
 #  for label, value in labels.items:
 LABEL $label="$value"
 #  end for

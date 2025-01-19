@@ -2,7 +2,7 @@
 #proc ubuntu*(version: string,
 #             labels: openarray[(string, string)] = {:}): string =
 #  result = ""
-FROM nimlang/nim:$version-ubuntu-slim
+FROM ekajake/nim-test:$version-ubuntu-slim
 #  for label, value in labels.items:
 LABEL $label="$value"
 #  end for
@@ -23,7 +23,7 @@ ENV PATH="/root/.nimble/bin:$$PATH"
 #proc alpine*(version: string,
 #             labels: openarray[(string, string)] = {:}): string =
 #  result = ""
-FROM nimlang/nim:$version-alpine-slim
+FROM ekajake/nim-test:$version-alpine-slim
 #  for label, value in labels.items:
 LABEL $label="$value"
 #  end for
